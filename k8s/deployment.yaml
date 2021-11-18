@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dojo-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dojo-k8s
+  template:
+    metadata:
+      labels:
+        app: dojo-k8s
+    spec:
+      containers:
+      - name: dojo-k8s
+        image: dojo-k8s:2.0.1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

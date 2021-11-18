@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dojo-k8s
+  labels:
+    name: dojo-k8s
+spec:
+  containers:
+  - name: dojo-k8s
+    image: dojo-k8s:2.0.1
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
