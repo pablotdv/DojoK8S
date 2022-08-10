@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: dojo-k8s
-        image: dojo-k8s:2.0.1
+        image: dojok8s:2.0.0
+        imagePullPolicy: IfNotPresent
         resources:
           limits:
             memory: "128Mi"

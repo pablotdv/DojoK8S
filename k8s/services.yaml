@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: dojo-k8s
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: dojo-k8s
   ports:
-  - port: 8080
+  - port: 80
     targetPort: 80

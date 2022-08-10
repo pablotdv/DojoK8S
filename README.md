@@ -44,6 +44,8 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 minikube start --vm-driver=docker
+
+minikube addons enable ingress
 ```
 
 fonte: https://minikube.sigs.k8s.io/docs/start/
@@ -64,4 +66,11 @@ fonte: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 docker build -f DojoK8S/Dockerfile . -t dojok8s 
 
 docker run -d -p 8080:80 dojok8s
+```
+
+# subindo uma imagem para o minikube
+
+
+```
+minikube image build -f DojoK8S/Dockerfile . -t dojok8s:2.0.0
 ```

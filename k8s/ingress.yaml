@@ -15,4 +15,4 @@ spec:
           service:
             name: dojo-k8s
             port: 
-              number: 8081
+              number: 80
